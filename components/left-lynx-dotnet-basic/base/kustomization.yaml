@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: left-lynx-dotnet-basic
+  janus-idp.io/tekton: left-lynx-dotnet-basic
+  backstage.io/kubernetes-id: left-lynx-dotnet-basic
+  backstage.io/kubernetes-namespace: rhtap-e2e-ci 
+  app.kubernetes.io/part-of: left-lynx-dotnet-basic
+resources: 
+- deployment.yaml
+- route.yaml
+- service.yaml
